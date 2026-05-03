@@ -1,89 +1,159 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>AquaTech | Página Inicial</title>
-
-  <script src="./js/sessao.js"></script>
-
+  <title>Skate 3 | Oficial</title>
   <link rel="stylesheet" href="./css/estilo.css">
-  <link rel="icon" href="./assets/icon/favicon2.ico">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="icon" href="./assets/imgs/skateicon.jpg">
 </head>
 
 <body>
+
   <div class="header">
     <div class="container">
       <div class="logo">
-        <img src="./assets/imgs/logo_Skate3.png">
+        <img src="./assets/imgs/logoFinalSkate3.png" alt="Skate 3 Logo">
       </div>
       <ul class="navbar">
-        <li class="agora">
-          <a href="#">Inicial</a>
-        </li>
-        <li>|</li>
-        <li>
-          <a href="simulador.html">Destaques</a>
-        </li>
-        <li>|</li>
-        <li>
-          <a href="login.html">Login</a>
-        </li>
-        <li>|</li>
-        <li>
-          <a href="cadastro.html">Cadastro</a>
-        </li>
+        <li class="agora"><a href="#inicio">INÍCIO</a></li>
+        <li><a href="#sobre">SOBRE</a></li>
+        <li><a href="#">CADASTRO</a></li>
+        <li><a href="#">LOGIN</a></li>
       </ul>
     </div>
   </div>
 
-  <div class="banner">
+  <div id="inicio" class="banner">
     <div class="container">
-      <p>Como o <span>Skate 3</span> mudou minha <span>vida</span>.</p>
-    </div>
-  </div>
-
-  <div class="social">
-    <div class="container">
-      <div class="boxes">
-        <div class="box">
-          <img src="assets/imgs/skateicon.jpg">
-          <h4>Missões</h4>
-          <p>No Skate 3 as missões são essenciais para a progressão do jogador, permitindo evoluir habilidades e
-            desbloquear novos desafios. Existem diferentes tipos, como as de pontuação, que exigem combos e manobras, as
-            de corrida, focadas em velocidade, e as de trick list, que pedem movimentos específicos. Cada missão
-            incentiva criatividade, controle e estilo próprio dentro do jogo.</p>
-        </div>
-        <div class="box">
-          <img src="assets/imgs/ossosicon.jpg">
-          <h4>Visão</h4>
-          <p>No modo quebra-ossos de Skate 3, o objetivo é causar o maior dano possível ao personagem através de quedas
-            e impactos. O jogador precisa escolher bem o local e o momento para se lançar, usando velocidade e
-            obstáculos ao redor. Esse modo exige estratégia e criatividade, já que quanto mais destrutiva for a queda,
-            maior será a pontuação alcançada.</p>
-        </div>
-        <div class="box">
-          <img src="assets/imgs/trofeuicon.jpg">
-          <h4>Valores</h4>
-          <p>No Skate 3, as conquistas funcionam como objetivos extras que incentivam o jogador a explorar diferentes
-            aspectos do jogo. Elas podem envolver completar desafios específicos, realizar manobras difíceis ou
-            progredir na carreira. Cada conquista exige dedicação e habilidade, recompensando o jogador com
-            reconhecimento pelo seu desempenho e evolução dentro do jogo.</p>
+      <div class="banner-content">
+        <h1>SEU SKATE. SUA CIDADE. <span>SEM REGRAS.</span></h1>
+        <p>Skate 3 é a evolução da série Skate.<br>
+          Explore a cidade de Port Carverton, crie seu skatista<br>
+          e mostre seu estilo nas ruas, parques e vert ramps.</p>
+        <div class="botoes">
         </div>
       </div>
     </div>
   </div>
 
-  <div class="footer">
+  <div id="sobre" class="sobre">
     <div class="container">
-      <h4>Feito por Danilo Vrena © 2026 Skate 3 Blog</h4>
-      <span class="version">v1.0.0</span>
+      <div class="sobre-img">
+        <img src="./assets/imgs/backGroundskate3.jpg" alt="Skate 3 Sobre">
+      </div>
+      <div class="sobre-text">
+        <h2>SOBRE SKATE 3</h2>
+        <div class="linha-laranja"></div>
+        <p>Skate 3 leva você para Port Carverton, uma cidade aberta feita para o skate. Sem limites, sem loading, só
+          você, seu skate e infinitas possibilidades.</p>
+        <p>Crie seu skatista, forme sua equipe e domine cada canto da cidade.</p>
+        <p>Do street ao vert, do park ao megarramp — a liberdade é toda sua.</p>
+      </div>
     </div>
   </div>
+
+  <div class="features">
+    <div class="container flex-column">
+      <h2>O QUE TORNA SKATE 3 ÚNICO</h2>
+      <div class="linha-laranja"></div>
+      <div class="boxes">
+        <div class="box">
+          <img src="./assets/imgs/planet-earth_color.png" alt="Mundo Aberto">
+          <h4>MUNDO ABERTO</h4>
+          <p>Explore Port Carverton sem telas de carregamento. A cidade é sua pista.</p>
+        </div>
+        <div class="box">
+          <img src="./assets/imgs/skateicon.jpg" alt="Personalização">
+          <h4>PERSONALIZAÇÃO</h4>
+          <p>Crie e personalize seu skatista, shape, roupas e a marca da sua equipe.</p>
+        </div>
+        <div class="box">
+          <img src="./assets/imgs/trofeuicon.jpg" alt="Desafios">
+          <h4>DESAFIOS</h4>
+          <p>Complete desafios, ganhe patrocínios e suba no ranking da cidade.</p>
+        </div>
+        <div class="box">
+          <img src="./assets/imgs/growth_color.png" alt="Vert e Megaramps">
+          <h4>VERT E MEGARAMPS</h4>
+          <p>A série que revolucionou o skate vertical com as maiores ramps já vistas.</p>
+        </div>
+        <div class="box">
+          <img src="./assets/imgs/lightbulb_color.png" alt="Compartilhe">
+          <h4>COMPARTILHE</h4>
+          <p>Grave fotos épicas e compartilhe seus melhores momentos com o mundo.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="gameplay-evolucao">
+    <div class="container">
+
+      <div class="coluna">
+        <h2>GAMEPLAY</h2>
+        <div class="linha-laranja"></div>
+        <div class="item-lista">
+          <span class="icone-check">✔</span>
+          <div class="texto">
+            <h4>Controle intuitivo e <span>responsivo</span></h4>
+            <p>Sinta cada manobra como se fosse real.</p>
+          </div>
+        </div>
+        <div class="item-lista">
+          <span class="icone-check">✔</span>
+          <div class="texto">
+            <h4>Sistema de <span>Flickit</span></h4>
+            <p>Combine manobras com facilidade e crie seu próprio estilo.</p>
+          </div>
+        </div>
+        <div class="item-lista">
+          <span class="icone-check">✔</span>
+          <div class="texto">
+            <h4>Física <span>realista</span></h4>
+            <p>Cada queda, cada landing e cada linha fazem a diferença.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="coluna">
+        <h2>RECURSOS DO JOGO</h2>
+        <div class="linha-laranja"></div>
+        <div class="item-lista">
+          <img src="./assets/imgs/pessoa1.png" alt="Equipe" class="icone-img">
+          <div class="texto">
+            <h4>MONTE SUA EQUIPE</h4>
+            <p>Convide amigos e forme uma equipe para dominar Port Carverton.</p>
+          </div>
+        </div>
+        <div class="item-lista">
+          <img src="./assets/imgs/trofeuicon.jpg" alt="Eventos" class="icone-img">
+          <div class="texto">
+            <h4>EVENTOS E COMPETIÇÕES</h4>
+            <p>Participe de eventos, ganhe prêmios e mostre quem manda no skate.</p>
+          </div>
+        </div>
+        <div class="item-lista">
+          <img src="./assets/imgs/pessoa2.png" alt="Reputação" class="icone-img">
+          <div class="texto">
+            <h4>SUA REPUTAÇÃO</h4>
+            <p>Conquiste patrocínios, ganhe respeito e torne-se uma lenda do skate.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <p>Feito com amor por Danilo &hearts; SPTech &copy; 2026</p>
+        <span class="version">v1.0.0</span>
+      </div>
+    </div>
+  </div>
+
 </body>
 
 </html>

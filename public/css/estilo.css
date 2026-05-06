@@ -266,3 +266,70 @@ body {
 html {
   scroll-behavior: smooth;
 }
+
+/*LOGIN E CADASTRO*/
+.login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+}
+
+.login .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login .card-login {
+    background: #1a1a1a;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px black;
+    width: 320px;
+    text-align: center;
+}
+
+.login .campo {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.login input {
+    width: 94%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid white;
+    background: #0f0f0f;
+    color: white;
+}
+
+.login .botao {
+    width: 100%;
+    padding: 12px;
+    background: white;
+    border: none;
+    border-radius: 5px;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.login .botao:hover {
+    background: white;
+}
+
+.loading-div {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.loading-div {
+    display: none;
+}
+
+.card-cadastro h2 {
+  display: flex;
+  justify-content: center;
+}

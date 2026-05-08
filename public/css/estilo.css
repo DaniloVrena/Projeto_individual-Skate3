@@ -62,7 +62,8 @@ body {
   font-size: 14px;
 }
 
-.navbar a:hover, .navbar .agora a {
+.navbar a:hover,
+.navbar .agora a {
   color: #ff6600;
 }
 
@@ -78,7 +79,7 @@ body {
 
 .banner-content {
   width: 600px;
-  text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
 }
 
 .banner h1 {
@@ -269,67 +270,136 @@ html {
 
 /*LOGIN E CADASTRO*/
 .login {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
 }
 
 .login .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .login .card-login {
-    background: #1a1a1a;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 0 15px black;
-    width: 320px;
-    text-align: center;
+  background: #1a1a1a;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px black;
+  width: 320px;
+  text-align: center;
 }
 
 .login .campo {
-    margin-bottom: 15px;
-    text-align: left;
+  margin-bottom: 15px;
+  text-align: left;
 }
 
 .login input {
-    width: 94%;
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid white;
-    background: #0f0f0f;
-    color: white;
+  width: 94%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid white;
+  background: #0f0f0f;
+  color: white;
 }
 
 .login .botao {
-    width: 100%;
-    padding: 12px;
-    background: white;
-    border: none;
-    border-radius: 5px;
-    color: black;
-    font-weight: bold;
-    cursor: pointer;
+  width: 100%;
+  padding: 12px;
+  background: white;
+  border: none;
+  border-radius: 5px;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
 }
 
 .login .botao:hover {
-    background: white;
+  background: white;
 }
 
 .loading-div {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
 }
 
 .loading-div {
-    display: none;
+  display: none;
 }
 
 .card-cadastro h2 {
   display: flex;
   justify-content: center;
+}
+
+/* QUIZ */
+
+.quiz-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #2b2b2b;
+  color: white;
+  padding: 40px;
+  border-radius: 10px;
+  width: 60%;
+  margin: 50px auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.pergunta {
+  margin-bottom: 20px;
+  width: 100%;
+  text-align: left;
+}
+
+.pergunta h3 {
+  color: #e67e22;
+  margin-bottom: 10px;
+}
+
+.opcoes {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.opcoes label {
+  background-color: #3d3d3d;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.opcoes label:hover {
+  background-color: #e67e22;
+  color: #fff;
+}
+
+.btn-quiz {
+  background-color: #e67e22;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-top: 20px;
+}
+
+.btn-quiz:hover {
+  background-color: #d35400;
+}
+
+#resultado_quiz {
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #2ecc71;
+  display: none;
 }

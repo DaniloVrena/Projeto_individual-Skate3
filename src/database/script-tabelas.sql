@@ -25,4 +25,10 @@ CREATE TABLE dashboard (
 	FOREIGN KEY (fk_usuario) REFERENCES usuario(id)
 );
 
+CREATE TABLE quiz (
+	id INT PRIMARY KEY AUTO_INCREMENT,
+	fk_usuario INT,
+	pontuacao INT,
+	FOREIGN KEY (fk_usuario) REFERENCES usuario(id)
+);
 SELECT *FROM usuario;

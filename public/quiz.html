@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Skate 3 | Quiz</title>
+
+    <script src="./js/sessao.js"></script>
+    <link rel="icon" href="./assets/imgs/skateicon.jpg">
+    <link rel="stylesheet" href="./css/estilo.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+
+</head>
+
+<body>
+    <!--header inicio-->
+    <div class="header">
+        <div class="container">
+            <h1 class="titulo">Skate 3</h1>
+            <ul class="navbar">
+                <li><a href="index.html">Inicial</a></li>
+                <li><a href="simulador.html">Simulador</a></li>
+                <li>|</li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="cadastro.html">Cadastro</a></li>
+            </ul>
+        </div>
+    </div>
+    <!--header fim-->
+
+    <div class="quiz-container">
+        <h2>Teste seus conhecimentos sobre Skate 3!</h2>
+        <p>Responda para definir seu nível de skatista na plataforma.</p>
+
+        <div class="pergunta" id="q1">
+            <h3>1. Em qual cidade fictícia se passa o jogo Skate 3?</h3>
+            <div class="opcoes">
+                <label><input type="radio" name="p1" value="A"> San Vanelona</label>
+                <label><input type="radio" name="p1" value="B"> Port Carverton</label>
+                <label><input type="radio" name="p1" value="C"> Los Santos</label>
+            </div>
+        </div>
+
+        <div class="pergunta" id="q2">
+            <h3>2. Qual estúdio foi responsável pelo desenvolvimento do Skate 3?</h3>
+            <div class="opcoes">
+                <label><input type="radio" name="p2" value="A"> Rockstar Games</label>
+                <label><input type="radio" name="p2" value="B"> Naughty Dog</label>
+                <label><input type="radio" name="p2" value="C"> EA Black Box</label>
+            </div>
+        </div>
+
+        <div class="pergunta" id="q3">
+            <h3>3. Qual é o famoso modo de jogo onde o objetivo é causar o máximo de dano ao skatista?</h3>
+            <div class="opcoes">
+                <label><input type="radio" name="p3" value="A"> Hall of Meat</label>
+                <label><input type="radio" name="p3" value="B"> Deathrace</label>
+                <label><input type="radio" name="p3" value="C"> Spot Battle</label>
+            </div>
+        </div>
+
+        <button class="btn-quiz" onclick="finalizarQuiz()">Enviar Respostas</button>
+
+        <div id="resultado_quiz"></div>
+    </div>
+
+    <!--footer inicio-->
+    <div class="footer">
+        <div class="container">
+            <p>Feito com amor por Danilo &hearts; SPTech &copy; 2026</p>
+        </div>
+    </div>
+    <!--footer fim-->
+
+</body>
+
+</html>
+
+<script>
+    function finalizarQuiz() {
+        var idUsuario = sessionStorage.ID_USUARIO;
+
+        if (!idUsuario) {
+            alert("Você precisa estar logado/cadastrado para salvar o quiz!");
+            window.location = "cadastro.html";
+            return;
+        }
+
+        var p1 = document.querySelector('input[name="p1"]:checked');
+        var p2 = document.querySelector('input[name="p2"]:checked');
+        var p3 = document.querySelector('input[name="p3"]:checked');
+
+        if (!p1 || !p2 || !p3) {
+            alert("Por favor, responda todas as perguntas antes de enviar!");
+            return;
+        }
+
+        var acertos = 0;
+
+        // Respostas corretas: 1: B, 2: C, 3: A
+        if (p1.value == "B") acertos++;
+        if (p2.value == "C") acertos++;
+        if (p3.value == "A") acertos++;
+
+        var divResultado = document.getElementById("resultado_quiz");
+        divResultado.style.display = "block";
+        divResultado.innerHTML = `Calculando sua pontuação...`;
+
+        // Enviando os dados para o backend
+        fetch("/quiz/cadastrar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                idUsuario: idUsuario,
+                pontuacao: acertos
+            })
+        })
+            .then(function (resposta) {
+                if (resposta.ok) {
+                    divResultado.innerHTML = `Quiz finalizado! Você acertou ${acertos} de 3 perguntas. Redirecionando para o login...`;
+                    setTimeout(() => {
+                        window.location = "login.html";
+                    }, 3000);
+                } else {
+                    throw "Houve um erro ao tentar salvar o quiz!";
+                }
+            })
+            .catch(function (erro) {
+                console.log(`#ERRO: ${erro}`);
+                divResultado.innerHTML = "Erro ao salvar a pontuação.";
+                divResultado.style.color = "red";
+            });
+    }
+</script>

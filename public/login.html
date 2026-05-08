@@ -18,7 +18,7 @@
             <h1 class="titulo">Skate 3</h1>
             <ul class="navbar">
                 <li><a href="index.html">Início</a></li>
-                <li><a href="manobras.html">Manobras</a></li>
+                <!-- <li><a href="manobras.html">Manobras</a></li> -->
                 <li>|</li>
                 <li class="agora"><a href="#">Login</a></li>
                 <li><a href="cadastro.html">Cadastro</a></li>
@@ -74,10 +74,18 @@
         var emailVar = email_input.value;
         var senhaVar = senha_input.value;
 
+        tentativas.push(emailVar);
+
+
+        var mensagemTentativas = "<br><br><b>Tentativas de login:</b><br>";
+        for (var i = 0; i < tentativas.length; i++) {
+            mensagemTentativas += `Tentativa ${i + 1}: ${tentativas[i]}<br>`;
+        }
+
         if (emailVar == '' || senhaVar == '') {
             var divErro = document.getElementById("div_erros_login");
 
-            divErro.innerHTML = "Preencha todos os campos!";
+            divErro.innerHTML = "Preencha todos os campos!" + mensagemTentativas;
             divErro.style.display = "block";
             finalizarAguardar();
             return false;
@@ -121,7 +129,7 @@
 
                 resposta.text().then(texto => {
                     console.error(texto);
-                    finalizarAguardar(texto);
+                    finalizarAguardar(texto + mensagemTentativas);
                 });
             }
 

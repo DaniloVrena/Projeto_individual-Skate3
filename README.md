@@ -1,4 +1,6 @@
-<img src="https://user-images.githubusercontent.com/46379117/192358781-9ca879e4-e55e-4d0d-b876-f9a4a2ed9ae8.png" width="600px">
+Crição do meu projeto individual de PI ultilizando a API Web Data Viz como base.
+
+<img width="1712" height="673" alt="image" src="https://github.com/user-attachments/assets/ebb26a93-bbd4-42e9-bb70-92bcc01b6e00" /><img src="https://user-images.githubusercontent.com/46379117/192358781-9ca879e4-e55e-4d0d-b876-f9a4a2ed9ae8.png" width="600px">
 
 _Web Data Visualization = Visualização de Dados na Web_
 
